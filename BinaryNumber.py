@@ -37,3 +37,14 @@ def bin_to_decimal(bin_num:int)->int:
 
 bin_num=1100101
 print(f"Binary number {bin_num} decimal is {bin_to_decimal(bin_num)}")
+
+print(f"bitwise and of 6 and 10 :{6&10}")
+print(f"bitwise or  of 6 and 10 :{6|10}")
+print(f"bitwise xor of 6 and 10 :{6^10}") #same bit 0 diff bits 1
+print(f"bitwise left-shift 10 by 2 :{10<<2}")
+# Shift left by pushing zeros in from the right and let the leftmost bits fall off
+# Formula:   a<<b==a*2^b
+print(f"bitwise right-shift 10 by 2 :{10>>2}")
+# Shift right by pushing copies of the leftmost bit in from the left, and let
+# the rightmost bits fall off
+# Formula:   a>>b==a//2^b
