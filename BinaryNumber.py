@@ -1,5 +1,5 @@
 # If we want to return binary number string
-def dec_to_Binary(num:int):
+def dec_to_Binary(num:int)->str:
     bin_num=""
     while num>0:
         rem=num%2
@@ -23,3 +23,17 @@ def dec_to_binary(num: int) -> int:
 
 num=9
 print(f"The binary of {num} is: {dec_to_Binary(num)}")
+
+# Binary to decimal Convertion
+def bin_to_decimal(bin_num:int)->int:
+    dec_num=0
+    pow=1 #2^0
+    while(bin_num>0):
+        rem=bin_num%10
+        dec_num+=rem*pow
+        bin_num//=10
+        pow*=2
+    return dec_num
+
+bin_num=1100101
+print(f"Binary number {bin_num} decimal is {bin_to_decimal(bin_num)}")
