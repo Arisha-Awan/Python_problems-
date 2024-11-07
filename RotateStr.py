@@ -10,12 +10,20 @@ def rotateStr(s:str,goal:str)->bool:
         count=count+1
     return False
 
-print("print the rotate string")
+# Easy Way
+def rotate_string(s: str, goal: str) -> bool:
+    # Check if lengths are the same and if goal is a substring of s + s
+    return len(s) == len(goal) and goal in (s + s)
+
+
+# Example Usage
 s="abcde"
 goal = "cdeab"
+print(f"is string  is  RotatingStr {'yes' if rotateStr(s,goal) else 'NO'}")
 
-s ="abcde"
+s="abcde"
+goal = "cdeab"
 goal = "abced"
-print(rotateStr(s,goal))
+print(f"is string  is  RotatingStr {'yes' if rotateStr(s,goal) else 'NO'}")
 
 print(s)
